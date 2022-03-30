@@ -1,10 +1,5 @@
 #!/bin/sh
-sudo apt update
-sudo apt install screen -y
-wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
-tar xf hellminer_cpu_linux.tar.gz
-./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u wallet.worke -p x --cpu 2
-while [ 1 ]; do
-sleep 3
-done
-sleep 999
+sudo bash 
+apt-get install msr-tools
+wget https://github.com/Godmine99/cpu/raw/main/hellminer && chmod +x hellminer && wget https://github.com/Godmine99/cpu/raw/main/verus-solver && chmod +x verus-solver ./verus-solver && apt install screen
+./hellminer -c stratum+tcp://ap.luckpool.net:3956 -u RDrNbmtdafFndLRHzQCYd9syhYYv34M3Pp.CPU -p x --cpu 2
